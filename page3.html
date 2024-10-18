@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- 
+      This is an HTML comment
+      You can write text in a comment and the content won't be visible in the page
+    -->
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="https://glitch.com/favicon.ico" />
+    <title>humans are</title>
+    <link rel="stylesheet" href="/page3.css" />
+
+    <!-- The website JavaScript file -->
+    <script src="/script.js" defer></script>
+  </head>
+  <body>
+    <br>
+    <br>
+
+    <div class="intro">
+      <img class="series" src="image/lonelyperson.png" width="400">
+      <p>
+        Humans are ____.
+      </p>
+      <br>
+    </div>
+    <div class="choice">
+        <a class="hat" href="page4.html">Kind</a>
+        <a class="hat" href="page4.html">Conflicted</a>
+        <a class="hat" href="page4.html">Brave</a>
+        <a class="hat" href="page4.html">Cruel</a>
+    </div>
+
+    <audio id="click-audio">
+      <source src="image/guzheng.m4a" type="audio/mp4">
+      Your browser does not support the audio element.
+    </audio> 
+
+    <script>
+      const audio = document.getElementById('click-audio');
+      const links = document.querySelectorAll('.hat'); // Select all links with class 'hat'
+
+      // Add event listeners to each link
+      links.forEach(function(link) {
+        link.addEventListener('click', function(event) {
+          event.preventDefault(); // Prevent the default link navigation
+          audio.volume = 0.7;
+          audio.play();
+
+          // After the audio ends, fade out and navigate to the clicked link's href
+          audio.addEventListener('ended', function() {
+            document.body.classList.add('fade-out');
+            setTimeout(function() {
+              window.location.href = link.href; // Navigate to the href of the clicked link
+            }, 1000); // Adjust the delay to match the fade-out effect
+          });
+        });
+      });
+</script>
+    <div class="back">
+      <a
+        class="backbtn"
+        href="page2.html"
+      >
+        &lt back
+      </a>
+    </div>
+    
+    
+  </body>
+</html>

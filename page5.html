@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- 
+      This is an HTML comment
+      You can write text in a comment and the content won't be visible in the page
+    -->
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="https://glitch.com/favicon.ico" />
+    <title>flying with google</title>
+    <link rel="stylesheet" href="/page5.css" />
+
+    <!-- The website JavaScript file -->
+    <script src="/script.js" defer></script>
+  </head>
+  <body>
+    <h1>
+      flying with google
+    </h1>
+    <a class="intro" href="page6.html">
+      press on me
+    </a>
+    <div class="images">
+      <div>
+        <img class="arctic" src="image/view1.png">
+        <p>
+          dip
+        </p>
+      </div>
+      <div>
+        <img class="arctic" src="image/view2.png">
+        <p>
+          Alveoli
+        </p>
+      </div>
+      <div>
+      <img class="arctic" src="image/view3.png">
+        <p>
+          The witch fight
+        </p>
+      </div>
+      <div>
+      <img class="arctic" src="image/view4.png">
+        <p>
+          Sea ax
+        </p>
+      </div>
+      <div>
+      <img class="arctic" src="image/view5.png">
+        <p>
+          Genie
+        </p>
+      </div>
+      <div>
+      <img class="arctic" src="image/view6.png">
+        <p>
+          Incoming
+        </p>
+      </div>
+      <div>
+      <img class="arctic" src="image/view7.png">
+        <p>
+          heart
+        </p>
+      </div>
+      <div>
+      <img class="arctic" src="image/view8.png">
+        <p>
+          how to make a gradient
+        </p>
+      </div>
+      <div>
+      <img class="arctic" src="image/view9.png">
+        <p>
+          insect eyes
+        </p>
+      </div>
+      <div>
+        <img class="arctic" src="image/view10.png">
+          <p>
+            whole
+          </p>
+        </div>
+  </div>
+    
+    <audio id="click-audio">
+      <source src="elf.m4a" type="audio/mp4">
+      Your browser does not support the audio element.
+    </audio>
+
+    
+    <div class="back">
+      <a
+        class="backbtn"
+        href="page4.html"
+      >
+        &lt back
+      </a>
+    </div>
+    
+    <div class="next">
+      <a
+        class="nextbtn"
+        href="page6.html"
+      >
+        next &gt
+      </a>
+    </div>
+    
+    <script>
+      const audio = document.getElementById('click-audio');
+      const link = document.querySelector('.intro');
+      const next = document.querySelector('nextbtn');
+
+      link.addEventListener('click', function(event) {
+        event.preventDefault(); 
+        audio.volume = 0.7;
+        audio.play();
+      });
+      
+
+      next.addEventListener('click', function() {
+        document.body.classList.add('fade-out'); 
+        setTimeout(function() {
+          window.location.href = "page6.html"; 
+        }, 1000);
+      }); 
+    </script>  
+    
+    
+  </body>
+</html>

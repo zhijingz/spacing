@@ -1,0 +1,118 @@
+@font-face {
+    font-family: Karla;
+    src: url("https://cdn.glitch.global/c7175132-3ac6-4f57-8f5e-fb0a2d6e4a40/Karla-VariableFont_wght.ttf?v=1728512933673");
+  }
+  
+  body {
+    background-color: black;
+    transition: opacity 1s ease;
+    opacity: 1;
+  }
+  
+  .fade-out {
+      opacity: 0; 
+  }
+  .intro {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .series {
+    width: 20;
+  }
+  
+  .back {
+    padding-top: 20vh;
+    display: grid;
+    justify-content: center;
+    padding-right: 70vh;
+  }
+  .backbtn {
+    font-family: Karla;
+    font-size: 20px;
+    padding: 10px;
+    width: 50px;
+    height: 30px;;
+    align-items: center;
+    color: #F0FFFF;
+    cursor: pointer;
+    border-radius: 4px;
+    text-decoration: none;
+    text-align: center;
+  }
+  
+  .backbtn:hover {
+    background-color: white;
+    color: black;
+  
+  }
+  p {
+    color: lightgrey;
+    font-family: Karla;
+    font-size: 15px;
+    display: flex;
+    justify-content: center;
+    
+  }
+  
+  .choice {
+    display: grid;
+    max-width: 400px;
+    margin: 0 auto;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+    text-align: center;
+  }
+  .choice a {
+    color: lightgrey;
+    font-family: Karla;
+    font-size: 15px;
+    text-decoration: none;
+  }
+  .choice a:hover {
+    background-color: white;
+    color: black;
+    cursor: pointer;
+  }
+  .Layer_5 {
+    background-image: url("Layer 5.png");
+    position: absolute;
+    left: 1000px;
+    top: 350px;
+    width: 500px;
+    z-index: 20;
+    mix-blend-mode: luminosity;
+  }
+  .Layer_7 {
+    background-image: url("Layer 7.png");
+    position: absolute;
+    left: 10px;
+    top: 0px;
+    width: 600px;
+    z-index: 12;
+    mix-blend-mode: luminosity;
+  }
+  .Layer_11 {
+    background-image: url("Layer 11.png");
+    position: absolute;
+    left: -100px;
+    top: 404px;
+    width: 500px;
+    z-index: 7;
+    mix-blend-mode: luminosity;
+  }
+  .Layer_13 {
+    background-image: url("Layer 13.png");
+    position: absolute;
+    left: 1040px;
+    top: -100px;
+    width: 400px;
+    z-index: 10;
+    mix-blend-mode: luminosity;
+  }
+  
+  
+  
+  
+  

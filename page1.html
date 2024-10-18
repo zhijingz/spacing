@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- 
+      This is an HTML comment
+      You can write text in a comment and the content won't be visible in the page
+    -->
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!--link rel="icon" href="https://glitch.com/favicon.ico"/-->
+    <title>at night</title>
+    <link rel="stylesheet" href="/page1.css" />
+
+    <!-- The website JavaScript file -->
+    <script src="/script.js" defer></script>
+  </head>
+  <body>
+
+    <a class = "mountain" href="page1-1.html">
+      <img src="image/page1.gif">
+    </a>
+
+    <audio id="hover-audio">
+      <source src="image/praynight.m4a" type="audio/mp4">
+      Your browser does not support the audio element.
+    </audio>
+    <script>
+      const audio = document.getElementById('hover-audio');
+      const link = document.querySelector('.mountain');
+      
+      link.addEventListener('click', function(event) {
+        event.preventDefault(); 
+        document.body.classList.add('fade-out'); 
+        setTimeout(function() {
+          window.location.href = "page1-1.html"; 
+        }, 1000);
+      });
+      
+      link.addEventListener('mouseover', function() {
+        audio.volume = 0.7;
+        audio.play();
+      });
+
+      link.addEventListener('mouseout', function() {
+        audio.pause();
+        audio.currentTime = 0;
+      });
+      
+      
+      audio.addEventListener('ended', function() {
+        document.body.classList.add('fade-out'); 
+        setTimeout(function() {
+          window.location.href = "page1-1.html"; 
+        }, 1000);
+      });
+    </script>
+
+    
+    <br>
+    <pre>
+      "Do not go gentle into that good night.
+
+      Rage, Rage against the dying of the light."
+    </pre>
+    <br>
+    
+    <div class="back">
+      <a
+        class="backbtn"
+        href="index.html"
+      >
+        &lt back
+      </a>
+    </div>
+  </body>
+</html>

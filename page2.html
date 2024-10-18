@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- 
+      This is an HTML comment
+      You can write text in a comment and the content won't be visible in the page
+    -->
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="https://glitch.com/favicon.ico" />
+    <title>me</title>
+    <link rel="stylesheet" href="/page2.css" />
+
+    <!-- The website JavaScript file -->
+    <script src="/script.js" defer></script>
+  </head>
+  <body>
+
+    <a class="mountain" href="#">
+      me
+    </a>
+    <img src="image/tuscany.gif">
+
+    <audio id="click-audio">
+      <source src="image/baroquepiano.m4a" type="audio/mp4">
+      Your browser does not support the audio element.
+    </audio>
+
+    <script>
+      const audio = document.getElementById('click-audio');
+      const link = document.querySelector('.mountain');
+
+      link.addEventListener('click', function(event) {
+        event.preventDefault(); // Prevent the default link navigation
+        audio.volume = 0.7;
+        audio.play(); // Play the audio when the link is clicked
+      });
+
+      // When the audio ends, navigate to the next page
+      audio.addEventListener('ended', function() {
+        document.body.classList.add('fade-out'); 
+        setTimeout(function() {
+          window.location.href = "page3.html"; 
+        }, 1000);
+      });
+      
+    </script>
+    
+    <pre>
+      Why  does  everyone  want  to  be  the outlier?
+      
+      Find me.
+    </pre>
+    <br>
+    
+    <div class="back">
+      <a
+        class="backbtn"
+        href="page1-1.html"
+      >
+        &lt back
+      </a>
+    </div>
+    
+    
+  </body>
+</html>
