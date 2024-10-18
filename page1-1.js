@@ -1,6 +1,4 @@
 
-
-
 const audio = document.getElementById('click-audio');
 const links = document.querySelectorAll('.click');
 const next = document.querySelector('.nextbtn')
