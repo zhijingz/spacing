@@ -17,9 +17,15 @@
       >
         return to start
       </a>
+      <a
+        class="startbtn"
+        href="https://zamme-porfolio.glitch.me/"
+      >
+        return to my profile
+      </a>
       <script>
-        const link = document.querySelector('.startbtn');
-        link.addEventListener('click', function(event) {
+        const links = document.querySelectorAll('.startbtn');
+        links.addEventListener('click', function(event) {
           event.preventDefault(); 
           document.body.classList.add('fade-out'); 
           setTimeout(function() {
