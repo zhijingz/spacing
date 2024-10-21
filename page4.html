@@ -10,52 +10,54 @@
   </head>
   
   <body>
-
-    
-    <a class="mountain" href="page5.html">You have told truth.</a>
-
-    <br>
-    <audio id="hover-audio" loop>
-      <source src="image/poison.m4a" type="audio/mp4">
-      Your browser does not support the audio element.
-    </audio>
-    
-    <script>
-      const audio = document.getElementById('hover-audio');
-      const link = document.querySelector('.mountain');
+    <div class="content">
+      <img class="image" src="https://cdn.glitch.global/c7175132-3ac6-4f57-8f5e-fb0a2d6e4a40/poison.gif?v=1728535431564">
+      <a class="mountain" href="page5.html">You have told truth.</a>
+     
+  
+      <br>
+      <audio id="hover-audio" loop>
+        <source src="image/poison.m4a" type="audio/mp4">
+        Your browser does not support the audio element.
+      </audio>
       
-      
-      link.addEventListener('mouseover', function() {
-        audio.currentTime = 0; // Restart the audio when hovered
-        audio.volume = 0.7;
-        audio.play();
-      });
-
-      link.addEventListener('mouseout', function() {
-        audio.pause();         // Pause the audio when the mouse leaves
-        audio.currentTime = 0; // Reset to the beginning
-      });
-      
-      link.addEventListener('click', function(event) {
-        event.preventDefault(); 
-        document.body.classList.add('fade-out'); 
-        setTimeout(function() {
-          window.location.href = "page5.html"; 
-        }, 1000);
-      });
-      
-
-    </script>
-    
-    <div class="back">
-      <a
-        class="backbtn"
-        href="page3.html"
-      >
-        &lt back 
-      </a>
+      <script>
+        const audio = document.getElementById('hover-audio');
+        const link = document.querySelector('.mountain');
+        
+        
+        link.addEventListener('mouseover', function() {
+          audio.currentTime = 0;
+          audio.volume = 0.7;
+          audio.play();
+        });
+  
+        link.addEventListener('mouseout', function() {
+          audio.pause();         
+          audio.currentTime = 0;
+        });
+        
+        link.addEventListener('click', function(event) {
+          event.preventDefault(); 
+          document.body.classList.add('fade-out'); 
+          setTimeout(function() {
+            window.location.href = "page5.html"; 
+          }, 1000);
+        });
+        
+  
+      </script>
     </div>
-    
+
+
+    <footer>
+      <a
+          class="backbtn"
+          href="page3.html"
+        >
+          &lt back 
+        </a>
+    </footer>
     
   </body>
 </html>

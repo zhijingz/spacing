@@ -15,50 +15,7 @@
       opacity: 0; 
   }
   
-  .back {
-    padding-top: 20vh;
-  }
-  .backbtn {
-    font-family: Karla;
-    font-size: 20px;
-    padding: 10px;
-    width: 60px;
-    height: 30px;;
-    align-items: center;
-    color: #F0FFFF;
-    cursor: pointer;
-    border-radius: 4px;
-    text-decoration: none;
-    text-align: center;
-  }
-  
-  .backbtn:hover {
-    background-color: white;
-    color: black;
-  }
-  
-  .next {
-    position: absolute;
-    left: 720px;
-  }
-  .nextbtn {
-    font-family: Karla;
-    font-size: 20px;
-    padding: 10px;
-    width: 90px;
-    height: 30px;;
-    align-items: center;
-    color: #F0FFFF;
-    cursor: pointer;
-    border-radius: 4px;
-    text-decoration: none;
-    text-align: center;
-  }
-  .nextbtn:hover {
-    background-color: white;
-    color: black;
-  }
-  
+
   .images {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -92,8 +49,6 @@
     text-decoration: none;
   }
   
-  
-  
   .intro:hover {
     background-color: white;
     color: black;
@@ -101,21 +56,31 @@
     
   }
   
-  .next {
-    text-decoration: none;
-    padding: 10px 0px;
-    border-radius: 4px;
-    width: 80px;
-    height: 20px;
-    margin-left: 70vh;
+   /* --------------------------------*/
+   footer {
+    display: flex;               
+    justify-content: space-between; 
+    margin-top: 50px;            
+    padding: 20px;              
+    background-color: black;  
   }
   
-  .next:hover {
+  .backbtn, .nextbtn {
+    font-family: Karla;
+    padding: 10px 20px;          
+    text-decoration: none;   
+    color: white;
+    border-radius: 4px;          
+    font-size: 20px;
+    cursor: pointer;
+    text-align: center;
+  }
+
+  .backbtn:hover, .nextbtn:hover {
     background-color: white;
     color: black;
-    cursor: pointer;
-    
   }
   
+  /* --------------------------------*/
   
   

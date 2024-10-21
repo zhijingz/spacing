@@ -80,40 +80,34 @@
   </div>
     
     <audio id="click-audio">
-      <source src="elf.m4a" type="audio/mp4">
+      <source src="image/elf.m4a" type="audio/mp4">
       Your browser does not support the audio element.
     </audio>
 
     
-    <div class="back">
-      <a
-        class="backbtn"
-        href="page4.html"
-      >
-        &lt back
-      </a>
-    </div>
-    
-    <div class="next">
-      <a
-        class="nextbtn"
-        href="page6.html"
-      >
-        next &gt
-      </a>
-    </div>
+    <footer>
+      <a class="backbtn" href="page4.html"> &lt back</a>
+      <a class="nextbtn" href="page6.html"> next &gt</a>
+    </footer>
     
     <script>
       const audio = document.getElementById('click-audio');
       const link = document.querySelector('.intro');
-      const next = document.querySelector('nextbtn');
+      const next = document.querySelector('.nextbtn');
+      let isPlaying = false;
 
       link.addEventListener('click', function(event) {
         event.preventDefault(); 
-        audio.volume = 0.7;
-        audio.play();
+        if (!isPlaying) {
+          audio.volume = 0.7;
+          audio.play();
+          isPlaying = true; 
+        }
+        else {
+          audio.pause();
+          isPlaying = false; 
+        } 
       });
-      
 
       next.addEventListener('click', function() {
         document.body.classList.add('fade-out'); 

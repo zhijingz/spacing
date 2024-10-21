@@ -5,8 +5,6 @@
   
   body {
     background-color: black;
-    
-    
     transition: opacity 1s ease;
     opacity: 1;
   }
@@ -38,28 +36,7 @@
     width: 100%;
     z-index: -1;
   }
-  .back {
-    padding-top: 20vh;
-  }
-  .backbtn {
-    font-family: Karla;
-    font-size: 20px;
-    padding: 10px;
-    width: 50px;
-    height: 30px;
-    align-items: center;
-    color: #F0FFFF;
-    cursor: pointer;
-    border-radius: 4px;
-    text-decoration: none;
-    margin-left: 400px;
-  }
   
-  .backbtn:hover {
-    background-color: white;
-    color: black;
-  
-  }
   p, pre {
     color: lightgrey;
     font-family: Karla;
@@ -69,4 +46,29 @@
     margin: 10px;
     padding-top: 480px;
   }
-  
+      /* --------------------------------*/
+      footer {
+        display: flex;               
+        justify-content: space-between; 
+        margin-top: 50px;            
+        padding: 20px;              
+        background-color: black;  
+      }
+      
+      .backbtn {  
+        font-family: Karla;
+        padding: 10px 20px;          
+        text-decoration: none;   
+        color: white;
+        border-radius: 4px;          
+        font-size: 20px;
+        cursor: pointer;
+        text-align: center;
+      }
+      
+      .backbtn:hover {
+        background-color: white;
+        color: black;
+      }
+      
+      /* --------------------------------*/

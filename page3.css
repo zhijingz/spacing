@@ -22,31 +22,7 @@
     width: 20;
   }
   
-  .back {
-    padding-top: 20vh;
-    display: grid;
-    justify-content: center;
-    padding-right: 70vh;
-  }
-  .backbtn {
-    font-family: Karla;
-    font-size: 20px;
-    padding: 10px;
-    width: 50px;
-    height: 30px;;
-    align-items: center;
-    color: #F0FFFF;
-    cursor: pointer;
-    border-radius: 4px;
-    text-decoration: none;
-    text-align: center;
-  }
-  
-  .backbtn:hover {
-    background-color: white;
-    color: black;
-  
-  }
+
   p {
     color: lightgrey;
     font-family: Karla;
@@ -75,42 +51,32 @@
     color: black;
     cursor: pointer;
   }
-  .Layer_5 {
-    background-image: url("Layer 5.png");
-    position: absolute;
-    left: 1000px;
-    top: 350px;
-    width: 500px;
-    z-index: 20;
-    mix-blend-mode: luminosity;
+  /* --------------------------------*/
+  footer {
+    display: flex;               
+    justify-content: space-between; 
+    margin-top: 50px;            
+    padding: 20px;              
+    background-color: black;  
   }
-  .Layer_7 {
-    background-image: url("Layer 7.png");
-    position: absolute;
-    left: 10px;
-    top: 0px;
-    width: 600px;
-    z-index: 12;
-    mix-blend-mode: luminosity;
+  
+  .backbtn {  
+    font-family: Karla;
+    padding: 10px 20px;          
+    text-decoration: none;   
+    color: white;
+    border-radius: 4px;          
+    font-size: 20px;
+    cursor: pointer;
+    text-align: center;
   }
-  .Layer_11 {
-    background-image: url("Layer 11.png");
-    position: absolute;
-    left: -100px;
-    top: 404px;
-    width: 500px;
-    z-index: 7;
-    mix-blend-mode: luminosity;
+  
+  .backbtn:hover {
+    background-color: white;
+    color: black;
   }
-  .Layer_13 {
-    background-image: url("Layer 13.png");
-    position: absolute;
-    left: 1040px;
-    top: -100px;
-    width: 400px;
-    z-index: 10;
-    mix-blend-mode: luminosity;
-  }
+  
+  /* --------------------------------*/
   
   
   

@@ -1,0 +1,73 @@
+@font-face {
+    font-family: Karla;
+    src: url("https://cdn.glitch.global/c7175132-3ac6-4f57-8f5e-fb0a2d6e4a40/Karla-VariableFont_wght.ttf?v=1728512933673");
+  }
+  
+  body {
+    background-color: black;
+    padding-top: 20vh;
+    margin: 0;
+    transition: opacity 1s ease;
+    opacity: 1;
+  }
+  
+  .fade-out {
+      opacity: 0; 
+  }
+  
+
+  .image-container {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    perspective: 1000px; /* Creates the 3D perspective */
+}
+
+.image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden; /* Hides the image when it is rotated */
+    transition: transform 0.8s;
+}
+
+.hidden {
+    display: none;
+}
+
+.flip .image {
+    transform: rotateY(180deg); /* Rotates the image on the Y axis */
+}
+
+#back-image {
+    transform: rotateY(180deg);
+}
+  
+   /* --------------------------------*/
+   footer {
+    display: flex;               
+    justify-content: space-between; 
+    margin-top: 50px;            
+    padding: 20px;              
+    background-color: black;  
+  }
+  
+  .backbtn, .nextbtn {
+    font-family: Karla;
+    padding: 10px 20px;          
+    text-decoration: none;   
+    color: white;
+    border-radius: 4px;          
+    font-size: 20px;
+    cursor: pointer;
+    text-align: center;
+  }
+
+  .backbtn:hover, .nextbtn:hover {
+    background-color: white;
+    color: black;
+  }
+  
+  /* --------------------------------*/
+  
+  
