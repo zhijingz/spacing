@@ -11,30 +11,42 @@
         This is a project in working. To be continued... 
     </p>
 
-      <a
-        class="startbtn"
-        href="index.html"
-      >
-        return to start
-      </a>
-      <a
-        class="startbtn"
-        href="https://zamme-porfolio.glitch.me/"
-      >
-        return to my profile
-      </a>
-      <script>
-        const links = document.querySelectorAll('.startbtn');
-        links.addEventListener('click', function(event) {
-          event.preventDefault(); 
-          document.body.classList.add('fade-out'); 
-          setTimeout(function() {
-            window.location.href = "index.html"; L
-          }, 1000);
-        });
-      </script>
-      <br>
-      <img src="image/start.gif" width="1000">
+    <a
+    class="startbtn"
+    href="index.html"
+  >
+    return to start
+  </a>
+  <a
+    class="profilebtn"
+    href="https://zamme-porfolio.glitch.me/"
+  >
+    return to my profile
+  </a>
 
-  </body>
+  <script>
+    const start = document.querySelector('.startbtn');
+    const profile = document.querySelector('.profilebtn');
+
+    start.addEventListener('click', function(event) {
+      event.preventDefault(); 
+      document.body.classList.add('fade-out'); 
+      setTimeout(function() {
+        window.location.href = start.href; 
+      }, 1000);
+    });
+
+    profile.addEventListener('click', function(event) {
+      event.preventDefault(); 
+      document.body.classList.add('fade-out'); 
+      setTimeout(function() {
+        window.location.href = profile.href; 
+      }, 1000);
+    });
+
+  </script>
+  <br>
+  <img src="image/start.gif" width="1000">
+
+</body>
 </html>

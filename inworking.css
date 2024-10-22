@@ -20,7 +20,7 @@
       opacity: 0; 
   }
   
-  .startbtn {
+  .startbtn, .profilebtn {
     font-family: Karla;
     font-size: 20px;
     font-weight: 500;
