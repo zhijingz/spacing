@@ -1,0 +1,57 @@
+
+@font-face {
+    font-family: Karla;
+    src: url("https://cdn.glitch.global/c7175132-3ac6-4f57-8f5e-fb0a2d6e4a40/Karla-VariableFont_wght.ttf?v=1728512933673");
+  }
+  
+  body {
+    background-color: black;
+    height: 100vh;
+    margin: 0;
+    text-align: center;
+    transition: opacity 1s ease;
+    opacity: 1;
+  }
+  
+  .fade-out {
+      opacity: 0; 
+  }
+  
+  .startbtn {
+    font-family: Karla;
+    font-size: 20px;
+    font-weight: 500;
+    padding: 10px;
+    width: 50px;
+    height: 30px;;
+    align-items: center;
+    color: #F0FFFF;
+    cursor: pointer;
+    border-radius: 4px;
+    text-decoration: none;
+    text-align: center;
+  }
+  img {
+    z-index: -1;
+    position: absolute;
+    top: 15vh;
+    left: 5vh;
+    width: 1300px;
+    
+  }
+  
+  .startbtn:hover {
+    background-color: white;
+    color: black;
+  }
+  
+  p {
+    font-family: Karla;
+    color: white;
+    font-size: 15px;
+    margin-bottom: 40vh;
+  }
+  
+  
+  
+  

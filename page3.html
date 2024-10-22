@@ -42,12 +42,12 @@
           audio.volume = 0.7;
           audio.play();
 
-          // After the audio ends, fade out and navigate to the clicked link's href
+          
           audio.addEventListener('ended', function() {
             document.body.classList.add('fade-out');
             setTimeout(function() {
-              window.location.href = link.href; // Navigate to the href of the clicked link
-            }, 1000); // Adjust the delay to match the fade-out effect
+              window.location.href = link.href; 
+            }, 1000); 
           });
         });
       });

@@ -11,10 +11,44 @@ body {
     padding: 0;
     height: 100%;
 }
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
+}
 
 .fade-out {
     opacity: 0;
+}
+
+#aSide {
+    padding: 0 0;
+    height: 600px;
+    width: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#aSide model-viewer {
+    height: 600px;
+    width: 600px;
+    border: none;
+}
+h3 {
+    color: white;
+    font-family: Karla; 
+    font-weight:100;
+}
+p {
+    font-weight:100;
+    padding-top: 0;
+    color: lightgrey;
+    font-family: Karla;
+    width: 30vw;
+    text-align: center;
 }
   
 /* --------------------------------*/
