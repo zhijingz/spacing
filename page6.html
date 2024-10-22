@@ -4,71 +4,90 @@
 
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>flying with google</title>
-    <link rel="stylesheet" type="text/css" href="/page5.css" />
-
-
+    <title>promisedland</title>
+    <link rel="stylesheet" type="text/css" href="page6.css" />
   </head>
-  <body>
 
-    <div class="section section-1">
-        <img id="enlarge-image" src="image/hike.jpg" class="scroll-image">
-    </div>
-    <div class="section section-2">
-        <h1>Next Page Content</h1>
-        <p>This is the content of the next page.</p>
+  <body>
+    <div class="content">
+        <h2>
+            The Promised Land
+        </h2>
+        <img src="image/hike.jpg" class="hike" id="hikeImage">
     </div>
     
-    <audio id="click-audio">
-      <source src="image/elf.m4a" type="audio/mp4">
-      Your browser does not support the audio element.
+    <audio id="audio">
+        <source src="image/Hike.m4a" type="audio/mp4">
+        Your browser does not support the audio element.
     </audio>
 
-    <script>
-        const frontImage = document.getElementById('front-image');
-        const backImage = document.getElementById('back-image');
-
-        frontImage.addEventListener('click', () => {
-            frontImage.classList.add('hidden');  // Hide the front image
-            backImage.classList.remove('hidden'); // Show the back image
-        });
-
-        backImage.addEventListener('click', () => {
-            backImage.classList.add('hidden');  // Hide the back image
-            frontImage.classList.remove('hidden'); // Show the front image
-        });
-    </script>
     <footer>
-      <a class="backbtn" href="page4.html"> &lt back</a>
+      <a class="backbtn" href="page5.html"> &lt back</a>
       <a class="nextbtn" href="page6.html"> next &gt</a>
     </footer>
-    
+
     <script>
-      const audio = document.getElementById('click-audio');
-      const link = document.querySelector('.intro');
-      const next = document.querySelector('.nextbtn');
-      let isPlaying = false;
+        let currentZoom = 1;
+        let minZoom = 1;
+        let maxZoom = 3;
+        let stepSize = 0.02;
+        let container = document.querySelector("#hikeImage");
+        let audio = document.querySelector("#audio");
+        let audioStarted = false;
+        
+        container.addEventListener("click", function() {
+            if (!audioStarted) {
+                audio.volume = 0.1; // Start with very low volume
+                audio.play().then(() => {
+                    audioStarted = true; // Set flag to true once audio starts
+                }).catch((error) => {
+                    console.error("Audio failed to play:", error);
+                });
+            }
+        });
 
-      link.addEventListener('click', function(event) {
-        event.preventDefault(); 
-        if (!isPlaying) {
-          audio.volume = 0.7;
-          audio.play();
-          isPlaying = true; 
+        container.addEventListener("wheel", function(event) {
+            event.preventDefault();
+            let direction = event.deltaY > 0 ? 1 : -1;
+            zoomImage(direction);
+        });
+
+        function zoomImage(direction)
+        {
+            let newZoom = currentZoom + direction * stepSize;
+            if (newZoom < minZoom) {
+                return;
+            }
+            if (newZoom > maxZoom) {
+                document.body.classList.add('fade-out'); 
+                setTimeout(function() {
+                    window.location.href = "page7.html"; 
+                }, 1000);
+                return;
+            }
+
+            currentZoom = newZoom;
+
+            let image = document.querySelector(".hike");
+            image.style.transform = "scale(" + currentZoom + ")";
+
+            if (!audioStarted && direction > 0) {
+                audio.play();
+                audioStarted = true;
+            }
+
+            if (audioStarted) {
+                let normalizedVolume = (currentZoom - minZoom) / (maxZoom - minZoom);
+                audio.volume = normalizedVolume;
+            }
+
+            if (currentZoom === minZoom) {
+                audio.pause();
+                audioStarted = false;
+            }
+
         }
-        else {
-          audio.pause();
-          isPlaying = false; 
-        } 
-      });
-
-      next.addEventListener('click', function() {
-        document.body.classList.add('fade-out'); 
-        setTimeout(function() {
-          window.location.href = "page6.html"; 
-        }, 1000);
-      }); 
-    </script>  
+    </script>
     
     
   </body>

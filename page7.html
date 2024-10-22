@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>page7</title>
+    <link rel="stylesheet" type="text/css" href="page7.css" />
+    <style>
+      .hidden {
+        visibility: hidden; /* Or you can use display: none; to remove it from the layout */
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="content" id="contentDiv">
+        <div class="dot"></div>
+
+            <p class="question">1/2 Green dots + how many years will you live? </p>
+            <input type="number" id="greenInput" class="in" placeholder="Enter a number" />
+            <button class="submit" onclick="checkAnswer()">Submit</button>
+
+    </div>
+
+    <footer>
+      <a class="backbtn" href="page6.html"> &lt back</a>
+      
+    </footer>
+
+    <script>
+      function checkAnswer() {
+        const input = document.getElementById("greenInput").value;
+        
+        if (isNaN(input) || input === "") {
+            alert("Numbers please");
+            return; 
+        }
+        const minAnswer = 25;
+        const maxAnswer = 100;
+
+        if (input >= minAnswer && input <= maxAnswer) {
+            document.body.classList.add('fade-out'); 
+                setTimeout(function() {
+                    window.location.href = "inworking.html"; 
+                }, 1000);
+        } 
+        else if (input < minAnswer) {
+            alert("Live longer!");
+        }
+        else {
+            alert("Life is fun because it's finite!");
+        }
+      }
+      document.getElementById("greenInput").addEventListener("keydown", function (event) {
+        if (event.key === "Enter") {
+          checkAnswer();
+        }
+      });
+
+      setTimeout(function() {
+        const contentDiv = document.querySelector(".dot");
+        contentDiv.classList.add("hidden");
+      }, 12000); 
+    </script>
+  </body>
+</html>
