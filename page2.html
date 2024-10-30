@@ -25,12 +25,11 @@
         const link = document.querySelector('.mountain');
 
         link.addEventListener('click', function(event) {
-          event.preventDefault(); // Prevent the default link navigation
+          event.preventDefault(); 
           audio.volume = 0.7;
-          audio.play(); // Play the audio when the link is clicked
+          audio.play(); 
         });
 
-        // When the audio ends, navigate to the next page
         audio.addEventListener('ended', function() {
           document.body.classList.add('fade-out'); 
           setTimeout(function() {
