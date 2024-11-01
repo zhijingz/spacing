@@ -7,7 +7,7 @@
     <link rel="stylesheet" type="text/css" href="page7.css" />
     <style>
       .hidden {
-        visibility: hidden; /* Or you can use display: none; to remove it from the layout */
+        visibility: hidden;
       }
     </style>
   </head>
@@ -16,7 +16,7 @@
     <div class="content" id="contentDiv">
         <div class="dot"></div>
 
-            <p class="question">1/2 Green dots + how many years will you live? </p>
+            <p class="question">How many years will you live? Or total amount of dots? </p>
             <input type="number" id="greenInput" class="in" placeholder="Enter a number" />
             <button class="submit" onclick="checkAnswer()">Submit</button>
 
@@ -35,13 +35,16 @@
             alert("Numbers please");
             return; 
         }
-        const minAnswer = 25;
-        const maxAnswer = 100;
-
-        if (input >= minAnswer && input <= maxAnswer) {
+        const minAnswer = 20;
+        const maxAnswer = 90;
+        if (input == 130) {
+            alert("Don't be so boring. Have a guess at your life expectancy.");
+        }
+        else if (input >= minAnswer && input <= maxAnswer) {
+            localStorage.setItem("years", input)
             document.body.classList.add('fade-out'); 
                 setTimeout(function() {
-                    window.location.href = "page8.html"; 
+                    window.location.href = "page7-1.html"; 
                 }, 1000);
         } 
         else if (input < minAnswer) {

@@ -37,9 +37,9 @@
         
         container.addEventListener("click", function() {
             if (!audioStarted) {
-                audio.volume = 0.1; // Start with very low volume
+                audio.volume = 0.1; 
                 audio.play().then(() => {
-                    audioStarted = true; // Set flag to true once audio starts
+                    audioStarted = true;
                 }).catch((error) => {
                     console.error("Audio failed to play:", error);
                 });
