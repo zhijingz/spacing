@@ -85,7 +85,7 @@ footer {
   text-align: center;
 }
 
-.backbtn:hover {
+.backbtn:hover .nextbtn:hover{
   background-color: white;
   color: black;
 }
