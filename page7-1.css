@@ -1,39 +1,39 @@
 @font-face {
-    font-family: Karla;
-    src: url("image/karla.ttf");
-  }
+  font-family: Karla;
+  src: url("image/karla.ttf");
+}
+
+body {
+  background-color: black;
   
-  body {
-    background-color: black;
-    
-    transition: opacity 1s ease;
-    opacity: 1;
-  }
-  
-  .fade-out {
-      opacity: 0; 
-  }
-  .content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-  }
-  .life {
-    font-weight: 100;
-    text-align: center;
-    color: white;
-    font-family: Karla;
-    margin: 30px;
-  }
-  .word {
-    position: absolute;
-    color: white;
-    font-family: Karla;
-    transition: transform 0.3s ease;
-    padding: 10px;
-  }
+  transition: opacity 1s ease;
+  opacity: 1;
+}
+
+.fade-out {
+    opacity: 0; 
+}
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.life {
+  font-weight: 100;
+  text-align: center;
+  color: white;
+  font-family: Karla;
+  margin: 30px;
+}
+.word {
+  position: absolute;
+  color: white;
+  font-family: Karla;
+  transition: transform 0.3s ease;
+  padding: 10px;
+}
 #inputSection {
     position: absolute;
     margin-top: 20px;
@@ -45,31 +45,49 @@
     overflow: hidden;
     z-index: -1;
 }
+.wordinput {
+  all: unset;
+  font-family: Karla;
+  color: white;
+  padding: 5px;
+  background-color: black;
+  border: 1px solid white;
+  border-radius: 5px;
+  box-shadow: none;
+}
+.addWord {
+  margin-top: 10px;
+  padding: 6px;
+  background-color: darkgrey;
+  border-radius: 7px;
+}
+.addWord:hover {
+  background: lightgrey;
+}
 
+/* --------------------------------*/
+footer {
+  display: flex;               
+  justify-content: space-between; 
+  margin-top: 50px;            
+  padding: 20px;              
+  background-color: black;  
+}
 
-    /* --------------------------------*/
-    footer {
-      display: flex;               
-      justify-content: space-between; 
-      margin-top: 50px;            
-      padding: 20px;              
-      background-color: black;  
-    }
-    
-    .backbtn, .nextbtn {  
-      font-family: Karla;
-      padding: 10px 20px;          
-      text-decoration: none;   
-      color: white;
-      border-radius: 4px;          
-      font-size: 20px;
-      cursor: pointer;
-      text-align: center;
-    }
-    
-    .backbtn:hover {
-      background-color: white;
-      color: black;
-    }
-    
-    /* --------------------------------*/
+.backbtn, .nextbtn {  
+  font-family: Karla;
+  padding: 10px 20px;          
+  text-decoration: none;   
+  color: white;
+  border-radius: 4px;          
+  font-size: 20px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.backbtn:hover {
+  background-color: white;
+  color: black;
+}
+
+/* --------------------------------*/
