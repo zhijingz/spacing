@@ -4,8 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>me</title>
-    <link rel="stylesheet" type="text/css" href="page7-1.css" />
-
+    <link rel="stylesheet" type="text/css" href="page7-1.css"/>
 
   </head>
   <body>
@@ -15,17 +14,22 @@
     <p id="life" class="life"></p>
     <p class="life">How will you live those years?</p>
     <div id="inputSection"></div>
-        <input type="text" id="wordInput" placeholder="type your word" />
+        <input type="text" id="wordInput" placeholder="type something" />
         <button onclick="addWord()">Add Word</button>
     </div>
 
-    
     <script>
+        const input = localStorage.getItem("years");
+        document.getElementById("life").innerHTML = `You want to live for ${input} years.`;
+        
+        const wordsArray = JSON.parse(localStorage.getItem("wordsArray")) || [];
 
-    const input = localStorage.getItem("years");
-    document.getElementById("life").innerHTML = `You want to live for ${input} years.`;
-    
-    const wordsArray = JSON.parse(localStorage.getItem("wordsArray")) || [];
+        /* only for clearing existing array memory!
+        localStorage.removeItem("wordsArray");
+        wordsArray.length = 0;
+
+        window.onload = displayWords;
+        */
 
         function displayWords() {
             const container = document.getElementById("scatteredWordsContainer");
@@ -51,39 +55,39 @@
 
                 container.appendChild(wordSpan);
             });
-    }
-
-    function addWord() {
-        const wordInput = document.getElementById("wordInput");
-        const word = wordInput.value.trim();
-        wordInput.value = "";
-
-        if (word) {
-            wordsArray.push(word);
-            localStorage.setItem("wordsArray", JSON.stringify(wordsArray));
-
-            document.getElementById("inputSection").style.display = "none";
-
-            document.getElementById("scatteredWordsContainer").style.display = "block";
-
-            displayWords();
         }
-    }
 
-    function getRandomColor() {
-        const letters = '0123456789ABCDEF';
-        let color = '#';
-        for (let i = 0; i < 6; i++) {
-            color += letters[Math.floor(Math.random() * 16)];
+        function addWord() {
+            const wordInput = document.getElementById("wordInput");
+            const word = wordInput.value.trim();
+            wordInput.value = "";
+
+            if (word) {
+                wordsArray.push(word);
+                localStorage.setItem("wordsArray", JSON.stringify(wordsArray));
+
+                document.getElementById("inputSection").style.display = "none";
+
+                document.getElementById("scatteredWordsContainer").style.display = "block";
+
+                displayWords();
+            }
         }
-        return color;
-    }
 
-    function getRandomSize() {
-        return Math.floor(Math.random() * 21) + 20; 
-    }
+        function getRandomColor() {
+            const letters = '0123456789ABCDEF';
+            let color = '#';
+            for (let i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
+            }
+            return color;
+        }
 
-    window.onload = displayWords;
+        function getRandomSize() {
+            return Math.floor(Math.random() * 21) + 20; 
+        }
+
+        window.onload = displayWords;
     </script>
       <br>
     </div>

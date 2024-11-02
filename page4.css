@@ -2,6 +2,10 @@
   font-family: Karla;
   src: url("image/karla.ttf");
 }
+@font-face {
+  font-family: Karla-normal;
+  src: url("image/Karla-normal.ttf");
+}
 html {
   height: 100vh;
   width: 100vw;
@@ -30,7 +34,7 @@ body {
 
 .mountain {
   color: white;
-  font-family: Karla;
+  font-family: Karla-normal;
   font-weight: bold;
   font-size: 75px;
   text-decoration: none;
